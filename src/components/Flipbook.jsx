@@ -10,7 +10,7 @@ const workerPath =
     : "/dist/assets/pdf.worker.mjs"; // For local development
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  workerPath,
+  import.meta.env.BASE_URL + workerPath,
   import.meta.url
 ).toString();
 
